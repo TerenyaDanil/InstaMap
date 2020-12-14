@@ -561,8 +561,11 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  max-width: 1100px;
+  margin: 0px auto;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  padding: 0px 20px;
 }
 
 .inner-tarif__item {
@@ -578,21 +581,51 @@ img {
           align-items: center;
 }
 
+.inner-tarif__text-item {
+  margin: 0px 0px 20px 0px;
+  font-size: 1.6rem;
+  color: #fff;
+}
+
+.inner-tarif__text-item span {
+  font-size: 1.8rem;
+  font-weight: 700;
+  display: block;
+  margin: 0px 0px 10px 0px;
+  text-decoration: none !important;
+}
+
+.inner-tarif__text-item-line {
+  text-decoration: line-through;
+  cursor: url("../img/icon/lock.png"), default;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  opacity: 0.6;
+}
+
+.inner-tarif__text-item-line img {
+  display: none;
+}
+
 .inner-tarif__img {
-  padding: 0px 100px 0px 0px;
+  left: -53px;
+  position: relative;
 }
 
 .inner-tarif__wrap {
   padding: 30px 40px;
   background-color: #0f0f0f;
   display: inline-block;
-  min-width: 250px;
+  width: 300px;
 }
 
 .inner-tarif__title {
   text-align: center;
   font-size: 3.6rem;
   color: #fff;
+  margin: 0px 0px 20px 0px;
 }
 
 .inner-tarif__title.vip {
@@ -980,6 +1013,11 @@ img {
 
   .inner-tarif__item {
     margin: 0px 0px 100px 0px;
+  }
+
+  .inner-tarif__text-item-line img {
+    display: block;
+    margin: 0 auto 10px;
   }
 
   .qustions__container {

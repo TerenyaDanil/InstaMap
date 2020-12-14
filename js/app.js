@@ -165,6 +165,79 @@ let tarif = gsap.timeline({
 });
 
 
+let tarifItem = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".inner-tarif__price-1",   // pin the trigger element while active
+        start: "-300px center",
+        end: "center center",
+
+
+
+    }
+});
+
+let ItemOne = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".inner-tarif__item-1",   // pin the trigger element while active
+        start: "200px center",
+
+
+
+    }
+});
+
+
+let ItemTwo = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".inner-tarif__item-2",   // pin the trigger element while active
+        start: "200px center",
+
+
+
+    }
+});
+
+
+let ItemThree = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".inner-tarif__item-3",   // pin the trigger element while active
+        start: "200px center",
+        markers: true
+
+    }
+});
+
+
+let tarifOne = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".inner-tarif__price-1",   // pin the trigger element while active
+        start: "top center",
+
+
+    }
+});
+
+
+let tarifTwo = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".inner-tarif__price-2",   // pin the trigger element while active
+        start: "top center",
+
+
+    }
+});
+
+
+let tarifThree = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".inner-tarif__price-3",   // pin the trigger element while active
+        start: "top center",
+
+    }
+});
+
+
+
 
 if (window.innerWidth > 737) {
 
@@ -173,7 +246,8 @@ if (window.innerWidth > 737) {
         .from(".inner-tarif__img-1", { duration: 1.2, ease: "power4.out", opacity: 0, y: -50 }, "-=0.8")
         .from(".inner-tarif__img-2", { duration: 1.2, ease: "power4.out", opacity: 0, y: -50 }, "-=0.8")
         .from(".inner-tarif__img-3", { duration: 1.2, ease: "power4.out", opacity: 0, y: -50 }, "-=0.8")
-        .from(".inner-tarif__price-1 span", { duration: 0.8, ease: "power4.out", opacity: 1, fontSize: 48, y: 32 }, "-=0.6")
+
+    tarifItem.from(".inner-tarif__price-1 span", { duration: 0.8, ease: "power4.out", opacity: 1, fontSize: 48, y: 32 }, "-=0.6")
         .to(".inner-tarif__price-1", { duration: 0.8, ease: "power4.out", className: "+=inner-tarif__price inner-tarif__price-1 active" })
         .from(".inner-tarif__price-1 .price", { duration: 0.8, ease: "power4.out", opacity: 0 })
         .from(".inner-tarif__price-2 span", { duration: 0.8, ease: "power4.out", opacity: 1, fontSize: 48, y: 32 }, "-=0.6")
@@ -182,49 +256,25 @@ if (window.innerWidth > 737) {
         .from(".inner-tarif__price-3 span", { duration: 0.8, ease: "power4.out", opacity: 1, fontSize: 48, y: 32 }, "-=0.6")
         .to(".inner-tarif__price-3", { duration: 0.8, ease: "power4.out", className: "+=inner-tarif__price inner-tarif__price-3 active" })
         .from(".inner-tarif__price-3 .price", { duration: 0.8, ease: "power4.out", opacity: 0 })
-
 } else {
     tarif.from(".tarif__title", { duration: 1.2, ease: "power4.out", opacity: 0, y: 150 }, "-=0.8")
 
-    let tarifOne = gsap.timeline({
-        scrollTrigger: {
-            trigger: ".inner-tarif__item-1",   // pin the trigger element while active
-            start: "top center",
+    ItemOne.from(".inner-tarif__img-1", { duration: 1.2, ease: "power4.out", opacity: 0, y: -50 }, "+=0.2")
 
-
-        }
-    });
-
-    tarifOne.from(".inner-tarif__img-1", { duration: 1.2, ease: "power4.out", opacity: 0, y: -50 }, "+=0.2")
-        .from(".inner-tarif__price-1 span", { duration: 0.8, ease: "power4.out", opacity: 1, fontSize: 48, y: 32 }, "-=0.6")
+    tarifOne.from(".inner-tarif__price-1 span", { duration: 0.8, ease: "power4.out", opacity: 1, fontSize: 48, y: 32 }, "-=0.6")
         .to(".inner-tarif__price-1", { duration: 0.8, ease: "power4.out", className: "+=inner-tarif__price inner-tarif__price-1 active" })
         .from(".inner-tarif__price-1 .price", { duration: 0.8, ease: "power4.out", opacity: 0 })
 
-    let tarifTwo = gsap.timeline({
-        scrollTrigger: {
-            trigger: ".inner-tarif__item-2",   // pin the trigger element while active
-            start: "top center",
+    ItemTwo.from(".inner-tarif__img-2", { duration: 1.2, ease: "power4.out", opacity: 0, y: -50 }, "+=0.2")
 
-
-        }
-    });
-
-    tarifTwo.from(".inner-tarif__img-2", { duration: 1.2, ease: "power4.out", opacity: 0, y: -50 }, "+=0.2")
-        .from(".inner-tarif__price-2 span", { duration: 0.8, ease: "power4.out", opacity: 1, fontSize: 48, y: 32 }, "-=0.6")
+    tarifTwo.from(".inner-tarif__price-2 span", { duration: 0.8, ease: "power4.out", opacity: 1, fontSize: 48, y: 32 }, "-=0.6")
         .to(".inner-tarif__price-2", { duration: 0.8, ease: "power4.out", className: "+=inner-tarif__price inner-tarif__price-2 active" })
         .from(".inner-tarif__price-2 .price", { duration: 0.8, ease: "power4.out", opacity: 0 })
 
+    ItemThree.from(".inner-tarif__img-3", { duration: 1.2, ease: "power4.out", opacity: 0, y: -50 }, "+=0.2")
 
-    let tarifThree = gsap.timeline({
-        scrollTrigger: {
-            trigger: ".inner-tarif__item-3",   // pin the trigger element while active
-            start: "top center",
 
-        }
-    });
-
-    tarifThree.from(".inner-tarif__img-3", { duration: 1.2, ease: "power4.out", opacity: 0, y: -50 }, "+=0.2")
-        .from(".inner-tarif__price-3 span", { duration: 0.8, ease: "power4.out", opacity: 1, fontSize: 48, y: 32 }, "-=0.6")
+    tarifThree.from(".inner-tarif__price-3 span", { duration: 0.8, ease: "power4.out", opacity: 1, fontSize: 48, y: 32 }, "-=0.6")
         .to(".inner-tarif__price-3", { duration: 0.8, ease: "power4.out", className: "+=inner-tarif__price inner-tarif__price-3 active" })
         .from(".inner-tarif__price-3 .price", { duration: 0.8, ease: "power4.out", opacity: 0 })
 
