@@ -923,7 +923,7 @@ img {
     -webkit-transform: translate(-50%, 0);
         -ms-transform: translate(-50%, 0);
             transform: translate(-50%, 0);
-    top: 280px;
+    top: 39%;
   }
 
   .header__man img {
@@ -931,9 +931,13 @@ img {
   }
 
   .bot-header__time {
-    font-size: 2rem;
+    font-size: 1.6rem;
     padding: 10px 20px;
     margin: 0px 0px 0px 0px;
+  }
+
+  .bot-header__time img {
+    max-width: 35px;
   }
 
   .bot-header__title {

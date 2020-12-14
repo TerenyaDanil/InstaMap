@@ -113,6 +113,7 @@ if (window.innerWidth > 737) {
 
 } else {
     header.from(".header__dop", { duration: 1, ease: "power4.out", opacity: 0, x: 100 }, "+=0.2")
+        .from(".header__man", { duration: 1, ease: "power4.out", opacity: 0, y: 50 }, "-=0.6")
         .from(".bot-header__time", { duration: 1, ease: "power4.out", opacity: 0, y: 50 }, "-=0.6")
         .from(".bot-header__title", { duration: 1.2, ease: "power4.out", opacity: 0, y: 50 }, "-=0.6")
         .from(".bot-header__btn", { duration: 1, ease: "power4.out", opacity: 0, y: 50 }, "-=0.8")
@@ -183,6 +184,7 @@ let ItemOne = gsap.timeline({
 
 
 
+
     }
 });
 
@@ -190,7 +192,7 @@ let ItemOne = gsap.timeline({
 let ItemTwo = gsap.timeline({
     scrollTrigger: {
         trigger: ".inner-tarif__item-2",   // pin the trigger element while active
-        start: "200px center",
+        start: "200px center"
 
 
 
@@ -258,19 +260,19 @@ if (window.innerWidth > 737) {
 } else {
     tarif.from(".tarif__title", { duration: 1.2, ease: "power4.out", opacity: 0, y: 150 }, "-=0.8")
 
-    ItemOne.from(".inner-tarif__img-1", { duration: 1.2, ease: "power4.out", opacity: 0, y: -50 }, "+=0.2")
+    ItemOne.from(".inner-tarif__img-1", { duration: 1.2, ease: "power4.out", opacity: 0, x: 50 }, "-=0.2")
 
     tarifOne.from(".inner-tarif__price-1 span", { duration: 0.8, ease: "power4.out", opacity: 1, fontSize: 48, y: 32 }, "-=0.6")
         .to(".inner-tarif__price-1", { duration: 0.8, ease: "power4.out", className: "+=inner-tarif__price inner-tarif__price-1 active" })
         .from(".inner-tarif__price-1 .price", { duration: 0.8, ease: "power4.out", opacity: 0 })
 
-    ItemTwo.from(".inner-tarif__img-2", { duration: 1.2, ease: "power4.out", opacity: 0, y: -50 }, "+=0.2")
+    ItemTwo.from(".inner-tarif__img-2", { duration: 1.2, ease: "power4.out", opacity: 0, x: 50 }, "-=0.2")
 
     tarifTwo.from(".inner-tarif__price-2 span", { duration: 0.8, ease: "power4.out", opacity: 1, fontSize: 48, y: 32 }, "-=0.6")
         .to(".inner-tarif__price-2", { duration: 0.8, ease: "power4.out", className: "+=inner-tarif__price inner-tarif__price-2 active" })
         .from(".inner-tarif__price-2 .price", { duration: 0.8, ease: "power4.out", opacity: 0 })
 
-    ItemThree.from(".inner-tarif__img-3", { duration: 1.2, ease: "power4.out", opacity: 0, y: -50 }, "+=0.2")
+    ItemThree.from(".inner-tarif__img-3", { duration: 1.2, ease: "power4.out", opacity: 0, x: 50 }, "-=0.2")
 
 
     tarifThree.from(".inner-tarif__price-3 span", { duration: 0.8, ease: "power4.out", opacity: 1, fontSize: 48, y: 32 }, "-=0.6")
