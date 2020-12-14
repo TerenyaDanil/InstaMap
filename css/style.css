@@ -289,7 +289,7 @@ img {
 
 .header__container {
   color: #fff;
-  padding: 32px 0px 0px 0px;
+  padding: 32px 10px 0px 10px;
   position: relative;
 }
 
@@ -319,6 +319,11 @@ img {
   display: block;
   font-size: 1.8rem;
   color: #e6ae3c;
+  margin: 0px 0px 10px 0px;
+}
+
+.header__dop span + span {
+  margin: 0px 0px 0px 0px;
 }
 
 .header__bg {
@@ -329,6 +334,10 @@ img {
       -ms-transform: translate(-50%, 0%);
           transform: translate(-50%, 0%);
   z-index: -1;
+}
+
+.header__man {
+  display: none;
 }
 
 .bot-header__time {
@@ -882,14 +891,43 @@ img {
 
   .header__dop {
     bottom: 130px;
+    width: 320px;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0) skew(-15deg);
+        -ms-transform: translate(-50%, 0) skew(-15deg);
+            transform: translate(-50%, 0) skew(-15deg);
+    right: auto;
+    z-index: 1;
+  }
+
+  .header__dop span {
+    margin: 0px 0px 5px 0px;
+  }
+
+  .header__dop span + span {
+    margin: 0px 0px;
   }
 
   .header__bg {
     top: 0;
-    left: -24%;
+    left: 216%;
     -webkit-transform: translate(-50%, 0%);
         -ms-transform: translate(-50%, 0%);
             transform: translate(-50%, 0%);
+  }
+
+  .header__man {
+    display: block;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    top: 280px;
+  }
+
+  .header__man img {
+    max-width: 300px;
   }
 
   .bot-header__time {
@@ -906,8 +944,12 @@ img {
   }
 
   .bot-header__btn {
-    margin: 400px 0px 0px 0px;
+    margin: 440px 0px 0px 0px;
     text-align: center;
+  }
+
+  .bot-header__btn a {
+    font-size: 1.4rem;
   }
 
   .footer__text {
