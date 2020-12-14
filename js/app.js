@@ -202,7 +202,6 @@ let ItemThree = gsap.timeline({
     scrollTrigger: {
         trigger: ".inner-tarif__item-3",   // pin the trigger element while active
         start: "200px center",
-        markers: true
 
     }
 });
