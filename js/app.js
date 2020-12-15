@@ -1,15 +1,6 @@
 
 
-// burger = document.querySelector('.header__burger');
-// menu = document.querySelector('.header__menu');
-// body = document.querySelector('body');
-
-// burger.onclick = function () {
-//     burger.classList.toggle('active');
-//     menu.classList.toggle('active');
-
-// }
-
+////////////////////////////////////////////////////////////////////////////////////////
 
 const anchors = document.querySelectorAll('a.scroll-to')
 
@@ -110,6 +101,7 @@ if (window.innerWidth > 737) {
         .from(".bot-header__time", { duration: 1, ease: "power4.out", opacity: 0, x: -150 }, "-=0.6")
         .from(".bot-header__title", { duration: 1.2, ease: "power4.out", opacity: 0, x: -150 }, "-=0.6")
         .from(".bot-header__btn", { duration: 1, ease: "power4.out", opacity: 0, x: -150 }, "-=0.8")
+        .add(createParticle());
 
 } else {
     header.from(".header__dop", { duration: 1, ease: "power4.out", opacity: 0, x: 100 }, "+=0.2")
@@ -117,6 +109,7 @@ if (window.innerWidth > 737) {
         .from(".bot-header__time", { duration: 1, ease: "power4.out", opacity: 0, y: 50 }, "-=0.6")
         .from(".bot-header__title", { duration: 1.2, ease: "power4.out", opacity: 0, y: 50 }, "-=0.6")
         .from(".bot-header__btn", { duration: 1, ease: "power4.out", opacity: 0, y: 50 }, "-=0.8")
+
 }
 
 
@@ -291,12 +284,13 @@ let qustions = gsap.timeline({
 
 
 qustions.from(".qustions__title", { duration: 1.2, ease: "power4.out", opacity: 0, y: 150 }, "-=0.8")
+    .from(".qustions__dop-right", { duration: 1.2, ease: "power4.out", opacity: 0, x: 50 }, "-=0.8")
     .from(".qustions__item-1", { duration: 1.2, ease: "power4.out", opacity: 0, y: 50 }, "-=0.8")
     .from(".qustions__item-2", { duration: 1.2, ease: "power4.out", opacity: 0, y: 50 }, "-=0.8")
     .from(".qustions__item-3", { duration: 1.2, ease: "power4.out", opacity: 0, y: 50 }, "-=0.8")
     .from(".qustions__item-4", { duration: 1.2, ease: "power4.out", opacity: 0, y: 50 }, "-=0.8")
     .from(".qustions__item-5", { duration: 1.2, ease: "power4.out", opacity: 0, y: 50 }, "-=0.8")
-    .from(".qustions__dop-right", { duration: 1.2, ease: "power4.out", opacity: 0, x: 50 }, "-=0.8")
+
 
 
 
